@@ -1,0 +1,32 @@
+@import "./config/reset";
+@import "./config/variables";
+@import "./config/global";
+@import "./config/helpers";
+
+.countdown {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    font-family: var(--second-font-family);
+    background: linear-gradient(90deg, rgba(97, 227, 152, 1) 14%, rgba(127, 28, 241, 1) 54%, rgba(235, 79, 105, 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    @media (min-width: 576px) {
+        font-size: 80px;
+        line-height: 1.5;
+    }
+    @media (min-width: 992px) {
+        font-size: 120px;
+    }
+}
+

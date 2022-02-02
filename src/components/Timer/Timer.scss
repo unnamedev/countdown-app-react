@@ -1,0 +1,30 @@
+.timer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    &__list {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, minmax(100px, 160px));
+        justify-content: center;
+
+        @media (min-width: 576px) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+
+    &__value {
+        padding: 30px 10px;
+        font-size: 60px;
+        font-weight: 800;
+        line-height: 1;
+        background-color: var(--base-color-3);
+        border-radius: 10px;
+        margin-bottom: 10px;
+
+        @media (min-width: 768px) {
+            font-size: 90px;
+        }
+    }
+}
