@@ -1,0 +1,15 @@
+.about {
+    display: grid;
+    grid-template-columns: auto minmax(200px, 800px) auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    &__container {
+        grid-column: 2/3;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

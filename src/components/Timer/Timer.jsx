@@ -1,5 +1,8 @@
 import React, {useEffect, useState} from "react"
+import {motion} from "framer-motion"
+// 💡 Style
 import "./Timer.scss"
+// 💡 Data
 import {addZero, calculateTimeLeft} from "../../helpers/helpers"
 
 const Timer = () => {
@@ -10,7 +13,12 @@ const Timer = () => {
         return () => clearInterval(timerId)
     })
 
-    return <div className="timer">
+    return <motion.div
+        className="timer"
+        initial={{y: 30, opacity: 0}}
+        animate={{y: 0, opacity: 1}}
+        transition={{duration: 1, delay: 1.5}}
+    >
         {Object.keys(timeLeft).length !== 0 && (
             <ul className="timer__list">
                 <li className="timer__item">
@@ -31,7 +39,7 @@ const Timer = () => {
                 </li>
             </ul>
         )}
-    </div>
+    </motion.div>
 }
 
 export default Timer

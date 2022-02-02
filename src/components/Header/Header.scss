@@ -15,6 +15,11 @@
         padding-left: 10px;
         padding-right: 10px;
         grid-column: 2/3;
+        
+        @media (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 
     &__menu {
@@ -25,6 +30,12 @@
         margin-left: auto;
         margin-right: auto;
         justify-content: center;
+
+        @media (min-width: 768px) {
+            left: 0;
+            right: 0;
+            position: absolute;
+        }
 
         .menu__item:nth-child(2) {
             position: relative;
@@ -47,6 +58,29 @@
                 right: 8px;
                 left: auto;
             }
+        }
+    }
+
+    &__download {
+        display: flex;
+        background-color: var(--base-color-4);
+        gap: 10px;
+        align-items: center;
+        padding: 10px;
+        border-radius: 5px;
+
+        &-top {
+            color: var(--base-color-2);
+            font-size: 16px;
+        }
+
+        &-bottom {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        span {
+            display: block;
         }
     }
 }

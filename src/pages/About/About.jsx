@@ -1,20 +1,20 @@
-import React from "react";
-import {Link} from "react-router-dom"
-// 💡 Data
-import {pages} from "../../data/pages"
+import React from "react"
+import {motion} from "framer-motion"
+// 💡 Style
+import "./About.scss"
 
-const About = () => {
-    const {about: {title, icon, text, version, button}} = pages
+const About = () =>
+    <section className="about">
+        <motion.div
+            className="about__container"
+            initial={{y: 30, opacity: 0}}
+            animate={{y: 0, opacity: 1}}
+            transition={{duration: 1, delay: 1}}
+        >
+            <h1 className="title home__title">About</h1>
+            <p>Countdown application</p>
+            <p>Version: 1.0.0</p>
+        </motion.div>
+    </section>
 
-    return <div className="page--center">
-        <div className="container">
-            <img src={icon} alt={title} style={{maxWidth: "300px", marginBottom: "30px"}}/>
-            <h1 className="title title-1">{title}</h1>
-            <p>{text}</p>
-            <p>{version}</p>
-            <Link className="button button--primary" to="/home">{button}</Link>
-        </div>
-    </div>
-}
-
-export default About;
+export default About

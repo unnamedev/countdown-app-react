@@ -1,6 +1,6 @@
 .home {
-    display: flex;
-    grid-template-columns: auto minmax(200px, 800px) auto;
+    display: grid;
+    grid-template-columns: auto minmax(200px, 900px) auto;
     justify-content: center;
     align-items: center;
     text-align: center;

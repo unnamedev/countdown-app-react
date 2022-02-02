@@ -1,6 +1,7 @@
 import React from "react"
 import {Link} from "react-router-dom"
 import {GrFacebook, GrInstagram, GrLinkedin} from "react-icons/gr"
+import {motion} from "framer-motion"
 // 💡 Style
 import "./Footer.scss"
 // 💡 Data
@@ -9,7 +10,11 @@ import {data} from "../../data/data"
 const Footer = () => {
     const {footer: {privacy}} = data
 
-    return <footer className="footer">
+    return <motion.footer className="footer"
+                   initial={{y: 30, opacity: 0}}
+                   animate={{y: 0, opacity: 1}}
+                   transition={{duration: 1, delay: 2.5}}
+    >
         <div className="footer__container">
             <Link to="/">{privacy}</Link>
 
@@ -27,7 +32,7 @@ const Footer = () => {
                 </li>
             </ul>
         </div>
-    </footer>
+    </motion.footer>
 }
 
 export default Footer
